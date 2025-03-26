@@ -53,7 +53,7 @@
     "@vue/tsconfig": "^0.7.0",
     "@vueuse/core": "^12.8.2",
     "dompurify": "^3.2.4",
-    "eslint": "^9.22.0",
+    "eslint": "^9.23.0",
     "eslint-plugin-vue": "^9.33.0",
     "express": "^4.21.2",
     "husky": "^9.1.7",
