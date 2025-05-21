@@ -52,7 +52,7 @@
     "@vue/eslint-config-typescript": "^14.5.0",
     "@vue/tsconfig": "^0.7.0",
     "@vueuse/core": "^13.1.0",
-    "dompurify": "^3.2.5",
+    "dompurify": "^3.2.6",
     "eslint": "^9.23.0",
     "eslint-plugin-vue": "^9.33.0",
     "express": "^4.21.2",
