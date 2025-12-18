@@ -1,38 +1,15 @@
 import { exec } from "child_process";
 import puppeteer, { type Browser } from "puppeteer";
 import { dirname, join } from "path";
-import { mkdir, rm } from "fs/promises";
+import { mkdir, rm, readdir } from "fs/promises";
 import { promisify } from "util";
 import { execSync } from "child_process";
 
 const outputDir = new URL("../docs/public/pdfs", import.meta.url).pathname;
-const langs = [
-  "en",
-  "zh",
-  "zh-CN",
-  "zh-TW",
-  "zh-HK",
-  "ja",
-  "es",
-  "fr",
-  "de",
-  "it",
-  "ko",
-  "ru",
-  "pt",
-  "ar",
-  "hi",
-  "tr",
-  "nl",
-  "sv",
-  "pl",
-  "vi",
-  "th",
-  "id",
-  "he",
-  "ms",
-  "no",
-];
+const distHowToUseDir = new URL(
+  "../.vitepress/dist/how-to-use",
+  import.meta.url,
+).pathname;
 
 const execAsync = promisify(exec);
 
@@ -83,6 +60,25 @@ async function generatePDF(browser: Browser, url: string, savePath: string) {
   }
 }
 
+// Get available languages from dist directory
+async function getAvailableLangs(): Promise<string[]> {
+  try {
+    const files = await readdir(distHowToUseDir);
+    const langs = files
+      .filter((file) => file.endsWith(".html"))
+      .map((file) => file.replace(/\.html$/, ""))
+      .sort();
+    console.log(`📋 Found ${langs.length} languages: ${langs.join(", ")}`);
+    return langs;
+  } catch (error) {
+    console.error(
+      `❌ Failed to read languages from ${distHowToUseDir}:`,
+      error,
+    );
+    throw error;
+  }
+}
+
 async function main() {
   let browser: Browser | null = null;
   let previewProcess: ReturnType<typeof exec> | null = null;
@@ -93,7 +89,14 @@ async function main() {
     execSync("pnpm run build-only", { stdio: "inherit" });
     console.log("✅ Build completed");
 
-    // Step 2: Start preview server
+    // Step 2: Get available languages from dist directory
+    const langs = await getAvailableLangs();
+    if (langs.length === 0) {
+      console.error("❌ No language files found in dist directory");
+      process.exit(1);
+    }
+
+    // Step 3: Start preview server
     console.log("🌐 Starting preview server...");
     previewProcess = exec("pnpm run preview", { cwd: process.cwd() });
 
@@ -104,7 +107,7 @@ async function main() {
     const baseUrl = "http://localhost:4173";
     console.log(`🌐 Server running at ${baseUrl}`);
 
-    // Step 3: Generate PDFs
+    // Step 4: Generate PDFs
     console.log("🚀 Launching browser...");
     browser = await puppeteer.launch({
       headless: true,
