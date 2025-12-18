@@ -32,6 +32,9 @@ export function compressPdf(
     mupdf.Document.META_INFO_MODIFICATIONDATE,
     creationModPdfDate,
   );
+  doc.setMetaData(mupdf.Document.META_INFO_AUTHOR, "Look Scanned");
+  doc.setMetaData(mupdf.Document.META_INFO_CREATOR, "Look Scanned");
+  doc.setMetaData(mupdf.Document.META_INFO_PRODUCER, "Look Scanned");
 
   // Rewrite + compress
   const array = doc.saveToBuffer(MUPDF_SAVE_OPTS).asUint8Array();
