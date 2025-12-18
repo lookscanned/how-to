@@ -3,7 +3,7 @@ import puppeteer, { type Browser } from "puppeteer";
 import { dirname, join } from "path";
 import { mkdir, rm, readdir } from "fs/promises";
 import { promisify } from "util";
-import { execSync } from "child_process";
+import { build, serve } from "vitepress";
 
 const outputDir = new URL("../docs/public/pdfs", import.meta.url).pathname;
 const distHowToUseDir = new URL("../dist/how-to-use", import.meta.url).pathname;
@@ -78,12 +78,11 @@ async function getAvailableLangs(): Promise<string[]> {
 
 async function main() {
   let browser: Browser | null = null;
-  let previewProcess: ReturnType<typeof exec> | null = null;
 
   try {
     // Step 1: Build the application
     console.log("🏗️ Building VitePress site...");
-    execSync("pnpm run build", { stdio: "inherit" });
+    await build();
     console.log("✅ Build completed");
 
     // Step 2: Get available languages from dist directory
@@ -95,13 +94,13 @@ async function main() {
 
     // Step 3: Start preview server
     console.log("🌐 Starting preview server...");
-    previewProcess = exec("pnpm run preview", { cwd: process.cwd() });
+    const polka = await serve();
+    const address = polka.server.address();
+    if (!address || typeof address === "string") {
+      throw new Error("Failed to get port from preview server");
+    }
 
-    // Wait for server to start (simple approach - wait a bit)
-    await new Promise((resolve) => setTimeout(resolve, 3000));
-
-    // Get server URL (VitePress preview typically runs on port 4173)
-    const baseUrl = "http://localhost:4173";
+    const baseUrl = `http://${address.family === "IPv6" ? `[${address.address}]` : address.address}:${address.port}`;
     console.log(`🌐 Server running at ${baseUrl}`);
 
     // Step 4: Generate PDFs
@@ -121,6 +120,7 @@ async function main() {
     }
 
     console.log("✅ All PDFs generated successfully");
+    polka.server.close();
   } catch (error) {
     console.error("🚨 An error occurred:", error);
     process.exit(1);
@@ -128,9 +128,6 @@ async function main() {
     // Cleanup resources
     if (browser) {
       await browser.close();
-    }
-    if (previewProcess) {
-      previewProcess.kill();
     }
   }
 }
