@@ -69,3 +69,7 @@ body {
 #app {
   width: 100%;
 }
+
+body {
+  text-autospace: normal;
+}
