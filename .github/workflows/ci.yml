@@ -47,9 +47,6 @@ jobs:
       - name: Build PDFs
         run: pnpm run build:pdfs
 
-      - name: Build Sitemap
-        run: pnpm run build:sitemap
-
       - name: Run build
         run: pnpm run build
 
