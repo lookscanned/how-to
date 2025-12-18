@@ -1,2 +1,5 @@
 CHANGELOG.md
 pnpm-lock.yaml
+
+**/dist
+**/cache

@@ -4,17 +4,16 @@
   "private": false,
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vitepress dev",
     "build": "run-p type-check \"build-only {@}\" --",
-    "preview": "vite preview",
-    "build-only": "vite build",
+    "preview": "vitepress preview",
+    "build-only": "vitepress build",
     "type-check": "vue-tsc --build",
     "lint": "eslint . --fix",
     "lint-check": "eslint . --no-fix",
-    "format": "prettier --write src/",
-    "format-check": "prettier --check src/",
+    "format": "prettier --write .",
+    "format-check": "prettier --check .",
     "build:pdfs": "vite-node scripts/build-pdfs.ts",
-    "build:sitemap": "vite-node scripts/build-sitemap.ts",
     "prepare": "husky"
   },
   "publishConfig": {
@@ -75,6 +74,7 @@
     "vite": "^7.3.0",
     "vite-node": "^5.2.0",
     "vite-plugin-vue-devtools": "^8.0.5",
+    "vitepress": "2.0.0-alpha.15",
     "vue": "^3.5.25",
     "vue-router": "^4.6.4",
     "vue-tsc": "^3.1.8"

@@ -1,0 +1,71 @@
+/* Import base Noto Serif (variable font) */
+@import "@fontsource-variable/noto-serif/index.css";
+
+/* Import language-specific variants (variable fonts) */
+/* Supports weights 100-900 */
+@import "@fontsource-variable/noto-serif-sc/index.css";
+@import "@fontsource-variable/noto-serif-tc/index.css";
+@import "@fontsource-variable/noto-serif-hk/index.css";
+@import "@fontsource-variable/noto-serif-jp/index.css";
+@import "@fontsource-variable/noto-serif-kr/index.css";
+@import "@fontsource-variable/noto-serif-devanagari/index.css";
+@import "@fontsource-variable/noto-serif-thai/index.css";
+@import "@fontsource-variable/noto-serif-hebrew/index.css";
+@import "@fontsource-variable/noto-naskh-arabic/index.css";
+
+body {
+  font-family: "Noto Serif Variable", serif;
+}
+
+:lang(en) {
+  font-family: "Noto Serif Variable", serif;
+}
+
+:lang(zh-CN),
+:lang(zh) {
+  font-family: "Noto Serif SC Variable", "Noto Serif Variable", serif;
+}
+
+:lang(zh-TW) {
+  font-family: "Noto Serif TC Variable", "Noto Serif Variable", serif;
+}
+
+:lang(zh-HK) {
+  font-family: "Noto Serif HK Variable", "Noto Serif Variable", serif;
+}
+
+:lang(ja) {
+  font-family: "Noto Serif JP Variable", "Noto Serif Variable", serif;
+}
+
+:lang(ko) {
+  font-family: "Noto Serif KR Variable", "Noto Serif Variable", serif;
+}
+
+:lang(hi) {
+  font-family: "Noto Serif Devanagari Variable", "Noto Serif Variable", serif;
+}
+
+:lang(th) {
+  font-family: "Noto Serif Thai Variable", "Noto Serif Variable", serif;
+}
+
+:lang(he) {
+  font-family: "Noto Serif Hebrew Variable", "Noto Serif Variable", serif;
+}
+
+:lang(ar) {
+  font-family: "Noto Naskh Arabic Variable", "Noto Serif Variable", serif;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #ffffff;
+  }
+}
+
+/* Ensure full width layout */
+#app {
+  width: 100%;
+}

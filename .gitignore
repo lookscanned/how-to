@@ -29,5 +29,9 @@ coverage
 
 *.tsbuildinfo
 
-public/pdfs/
-public/sitemap.xml
+docs/public/pdfs/
+
+.vitepress/dist
+.vitepress/cache
+
+
