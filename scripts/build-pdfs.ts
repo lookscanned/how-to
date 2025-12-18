@@ -83,7 +83,7 @@ async function main() {
   try {
     // Step 1: Build the application
     console.log("🏗️ Building VitePress site...");
-    execSync("pnpm run build-only", { stdio: "inherit" });
+    execSync("pnpm run build", { stdio: "inherit" });
     console.log("✅ Build completed");
 
     // Step 2: Get available languages from dist directory
