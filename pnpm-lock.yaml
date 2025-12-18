@@ -14,6 +14,36 @@ importers:
       '@commitlint/config-conventional':
         specifier: ^20.2.0
         version: 20.2.0
+      '@fontsource-variable/noto-naskh-arabic':
+        specifier: ^5.2.10
+        version: 5.2.10
+      '@fontsource-variable/noto-serif':
+        specifier: ^5.2.9
+        version: 5.2.9
+      '@fontsource-variable/noto-serif-devanagari':
+        specifier: ^5.2.10
+        version: 5.2.10
+      '@fontsource-variable/noto-serif-hebrew':
+        specifier: ^5.2.8
+        version: 5.2.8
+      '@fontsource-variable/noto-serif-hk':
+        specifier: ^5.2.9
+        version: 5.2.9
+      '@fontsource-variable/noto-serif-jp':
+        specifier: ^5.2.8
+        version: 5.2.8
+      '@fontsource-variable/noto-serif-kr':
+        specifier: ^5.2.9
+        version: 5.2.9
+      '@fontsource-variable/noto-serif-sc':
+        specifier: ^5.2.9
+        version: 5.2.9
+      '@fontsource-variable/noto-serif-tc':
+        specifier: ^5.2.9
+        version: 5.2.9
+      '@fontsource-variable/noto-serif-thai':
+        specifier: ^5.2.7
+        version: 5.2.7
       '@tsconfig/node22':
         specifier: ^22.0.5
         version: 22.0.5
@@ -638,6 +668,36 @@ packages:
   '@eslint/plugin-kit@0.4.1':
     resolution: {integrity: sha512-43/qtrDUokr7LJqoF2c3+RInu/t4zfrpYdoSDfYyhg52rwLV6TnOvdG4fXm7IkSB3wErkcmJS9iEhjVtOSEjjA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@fontsource-variable/noto-naskh-arabic@5.2.10':
+    resolution: {integrity: sha512-zPAQ5rcLFWDcvaFeKOj3JuQKzsQaZP7MC8Qs+8V+/dJLQZAVBtbvfKjMjCHe4BeJ8ffDtzryKQOegNF6iImb4Q==}
+
+  '@fontsource-variable/noto-serif-devanagari@5.2.10':
+    resolution: {integrity: sha512-EisxLoM8yj+Dd7p19MmWHX7NYTcccOVCHEiKWVbhtc3dxv7NDy8hrfsSdykKt7tAjp65jv7QcslEkVHb5zsWvg==}
+
+  '@fontsource-variable/noto-serif-hebrew@5.2.8':
+    resolution: {integrity: sha512-rYOLovvnesUztLaE6bD9IUl7rh5m4LH2kxa8ILoLKyU9PJ1o7V039HlmSA+ypwtGlk0y4TG5ZLu2ESNzJD4znQ==}
+
+  '@fontsource-variable/noto-serif-hk@5.2.9':
+    resolution: {integrity: sha512-WzQPz0BDUkpy7AKnkZ2amXLeAcWC5+hEr2TDWcTzAqIsVMHWkPUmLe2iIeeSopgj0SThHQ4jeGLD7Ivdp6h4QA==}
+
+  '@fontsource-variable/noto-serif-jp@5.2.8':
+    resolution: {integrity: sha512-NnECs1fvAPqWWdI1/VtUrtgTq3i9VaML34Aa4KqHbbsgK1ozqAe2Tq7lnl0Sm30Kjbb7wk6c4JpJAyaaE7ezog==}
+
+  '@fontsource-variable/noto-serif-kr@5.2.9':
+    resolution: {integrity: sha512-/sPzc+A/mRCUXrW+s4LTSQ+JmZQv2XrpvVwYg/zEMSCururb53Saefj3BLvAAzCWGthbIdOGrjPnajXdgrwaIQ==}
+
+  '@fontsource-variable/noto-serif-sc@5.2.9':
+    resolution: {integrity: sha512-7zfvfNQSlcgzuln7ycuyz25ng+DFMhSg7kkjxQeG/smJjRcy0skFvaEbwUsDxLXxWodMmHjO5efJ6bx5Up81CA==}
+
+  '@fontsource-variable/noto-serif-tc@5.2.9':
+    resolution: {integrity: sha512-sKU8xfbsRhHVYg1BDkLc+Pvg5nnUsIN0/xj0R9Ep4bz1O5deWL2mqqssnhqoT0G9mWKOz5v7lq7sddJ2lRuvpg==}
+
+  '@fontsource-variable/noto-serif-thai@5.2.7':
+    resolution: {integrity: sha512-NbasIAqbUwMZKXSZ+yFWlawnYWs50UpnW3+2tPY/DYk5bUiailK0hKybs/HT+8UpLtJTNt2cCV1JH+V/yw1meg==}
+
+  '@fontsource-variable/noto-serif@5.2.9':
+    resolution: {integrity: sha512-9McZzWeOjD/Gsko+w6A2lpGlHXZw5J2JmxaSMgopiIHoMYI1m6DAyFrzG9QQ0WjdWxj5jZfKM0EGSBVZHC6+nw==}
 
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
@@ -2968,6 +3028,26 @@ snapshots:
     dependencies:
       '@eslint/core': 0.17.0
       levn: 0.4.1
+
+  '@fontsource-variable/noto-naskh-arabic@5.2.10': {}
+
+  '@fontsource-variable/noto-serif-devanagari@5.2.10': {}
+
+  '@fontsource-variable/noto-serif-hebrew@5.2.8': {}
+
+  '@fontsource-variable/noto-serif-hk@5.2.9': {}
+
+  '@fontsource-variable/noto-serif-jp@5.2.8': {}
+
+  '@fontsource-variable/noto-serif-kr@5.2.9': {}
+
+  '@fontsource-variable/noto-serif-sc@5.2.9': {}
+
+  '@fontsource-variable/noto-serif-tc@5.2.9': {}
+
+  '@fontsource-variable/noto-serif-thai@5.2.7': {}
+
+  '@fontsource-variable/noto-serif@5.2.9': {}
 
   '@humanfs/core@0.19.1': {}
 
