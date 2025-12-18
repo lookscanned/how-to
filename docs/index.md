@@ -1,5 +1,7 @@
 ---
 home: true
+title: Look Scanned How To
+titleTemplate: false
 ---
 
 # How to use Look Scanned
