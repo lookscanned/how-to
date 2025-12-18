@@ -4,7 +4,7 @@ title: Look Scanned How To
 titleTemplate: false
 ---
 
-# How to use Look Scanned
+# How to Use Look Scanned
 
 - [en / English](/how-to-use/en)
 - [zh / 中文](/how-to-use/zh-CN)
