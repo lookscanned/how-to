@@ -45,7 +45,7 @@ jobs:
         run: pnpm run type-check
 
       - name: Install Chrome
-        run: pnpm dlx puppeteer browsers install
+        run: pnpm exec puppeteer browsers install chrome
 
       - name: Build PDFs
         run: pnpm run build:pdfs

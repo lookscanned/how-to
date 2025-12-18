@@ -53,7 +53,6 @@ useHead({
 
 <style scoped>
 .markdown {
-  font-family: 'Noto Serif';
   font-size: 1.5rem;
 }
 
