@@ -8,34 +8,6 @@ const gitCommitTime: number =
     execSync(`git show -s --format=%ct ${gitCommit}`).toString().trim(),
   ) * 1000;
 
-const langs = [
-  "en",
-  "zh",
-  "zh-CN",
-  "zh-TW",
-  "zh-HK",
-  "ja",
-  "es",
-  "fr",
-  "de",
-  "it",
-  "ko",
-  "ru",
-  "pt",
-  "ar",
-  "hi",
-  "tr",
-  "nl",
-  "sv",
-  "pl",
-  "vi",
-  "th",
-  "id",
-  "he",
-  "ms",
-  "no",
-];
-
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   srcDir: "docs",
@@ -45,6 +17,19 @@ export default defineConfig({
   description: "How to use Look Scanned",
   cleanUrls: true,
   lastUpdated: true,
+  head: [
+    ["link", { rel: "apple-touch-icon", href: "/apple-touch-icon.png" }],
+    ["link", { rel: "icon", href: "/favicon.ico", sizes: "48x48" }],
+    [
+      "link",
+      {
+        rel: "icon",
+        href: "/favicon.svg",
+        sizes: "any",
+        type: "image/svg+xml",
+      },
+    ],
+  ],
 
   vite: {
     define: {
@@ -57,16 +42,5 @@ export default defineConfig({
   sitemap: {
     hostname: "https://how-to.lookscanned.io",
     lastmodDateOnly: false,
-    transformItems: (items) => {
-      // Add PDF links to sitemap
-      for (const lang of langs) {
-        items.push({
-          url: `/pdfs/how-to-use/${lang}.pdf`,
-          changefreq: "monthly",
-          priority: 0.5,
-        });
-      }
-      return items;
-    },
   },
 });
