@@ -16,6 +16,7 @@ export default defineConfig({
   mpa: true,
 
   title: "Look Scanned How To",
+  titleTemplate: false,
   description: "How to use Look Scanned",
   cleanUrls: true,
   lastUpdated: true,
