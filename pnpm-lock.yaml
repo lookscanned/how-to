@@ -14,6 +14,9 @@ importers:
       '@commitlint/config-conventional':
         specifier: ^20.2.0
         version: 20.2.0
+      '@commitlint/types':
+        specifier: ^20.2.0
+        version: 20.2.0
       '@fontsource-variable/noto-naskh-arabic':
         specifier: ^5.2.10
         version: 5.2.10
