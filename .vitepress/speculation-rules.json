@@ -1,0 +1,25 @@
+{
+  "prerender": [
+    {
+      "where": {
+        "href_matches": "/*"
+      },
+      "eagerness": "moderate"
+    }
+  ],
+  "prefetch": [
+    {
+      "where": {
+        "or": [
+          {
+            "href_matches": "/*"
+          },
+          {
+            "href_matches": "https://lookscanned.io"
+          }
+        ]
+      },
+      "eagerness": "immediate"
+    }
+  ]
+}

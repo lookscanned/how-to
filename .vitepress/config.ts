@@ -1,6 +1,7 @@
 import { defineConfig } from "vitepress";
 import { execSync } from "node:child_process";
 import { version } from "../package.json";
+import speculationRules from "./speculation-rules.json";
 
 const gitCommit = execSync("git rev-parse HEAD").toString().trim();
 const gitCommitTime: number =
@@ -12,6 +13,7 @@ const gitCommitTime: number =
 export default defineConfig({
   srcDir: "docs",
   outDir: "dist",
+  mpa: true,
 
   title: "Look Scanned How To",
   description: "How to use Look Scanned",
@@ -29,6 +31,7 @@ export default defineConfig({
         type: "image/svg+xml",
       },
     ],
+    ["script", { type: "speculationrules" }, JSON.stringify(speculationRules)],
   ],
 
   vite: {
