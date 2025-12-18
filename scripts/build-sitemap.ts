@@ -8,7 +8,7 @@ const commitTimestamp = execSync('git log -1 --format=%at').toString().trim()
 const commitDate = new Date(parseInt(commitTimestamp) * 1000)
 const lastmod = commitDate.toISOString()
 
-const smStream = new SitemapStream({
+const sitemapStream = new SitemapStream({
   hostname: 'https://how-to.lookscanned.io',
   lastmodDateOnly: false,
   xmlns: {
@@ -20,29 +20,27 @@ const smStream = new SitemapStream({
   },
 })
 
-const xmlBuffer = new Promise<Buffer>((resolve, reject) => {
-  streamToPromise(smStream).then(resolve).catch(reject)
-})
-
-smStream.write({
+sitemapStream.write({
   url: 'https://how-to.lookscanned.io',
   lastmod,
 })
 
 for (const lang of langs) {
-  smStream.write({
+  sitemapStream.write({
     url: `https://how-to.lookscanned.io/how-to-use/${lang}`,
     lastmod,
   })
-  smStream.write({
+  sitemapStream.write({
     url: `https://how-to.lookscanned.io/pdfs/how-to-use/${lang}.pdf`,
     lastmod,
   })
 }
 
-smStream.end()
+sitemapStream.end()
 
-const buffer = await xmlBuffer
+const buffer = await streamToPromise(sitemapStream)
 
 // write to ./public/sitemap.xml
-await writeFile('./public/sitemap.xml', buffer)
+const sitemapPath = new URL('../public/sitemap.xml', import.meta.url).pathname
+await writeFile(sitemapPath, buffer)
+console.log(`✅ Sitemap written to ${sitemapPath}`)
