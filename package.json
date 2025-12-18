@@ -12,7 +12,7 @@
     "lint-check": "eslint . --no-fix",
     "format": "prettier --write .",
     "format-check": "prettier --check .",
-    "build:pdfs": "vite-node scripts/build-pdfs.ts",
+    "build:pdfs": "vite-node scripts/build-pdfs/index.ts",
     "prepare": "husky"
   },
   "publishConfig": {
@@ -61,6 +61,7 @@
     "eslint-plugin-vue": "^10.6.2",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
+    "mupdf": "^1.26.4",
     "prettier": "^3.7.4",
     "puppeteer": "^24.33.1",
     "typescript": "~5.9.3",
