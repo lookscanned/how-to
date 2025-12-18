@@ -39,6 +39,7 @@ const langs = [
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   srcDir: "docs",
+  outDir: "dist",
 
   title: "Look Scanned How To",
   description: "How to use Look Scanned",

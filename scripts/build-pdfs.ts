@@ -6,10 +6,7 @@ import { promisify } from "util";
 import { execSync } from "child_process";
 
 const outputDir = new URL("../docs/public/pdfs", import.meta.url).pathname;
-const distHowToUseDir = new URL(
-  "../.vitepress/dist/how-to-use",
-  import.meta.url,
-).pathname;
+const distHowToUseDir = new URL("../dist/how-to-use", import.meta.url).pathname;
 
 const execAsync = promisify(exec);
 

@@ -32,7 +32,4 @@ coverage
 
 docs/public/pdfs/
 
-.vitepress/dist
 .vitepress/cache
-
-
