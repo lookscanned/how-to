@@ -12,6 +12,7 @@
 @import "@fontsource-variable/noto-serif-thai/index.css";
 @import "@fontsource-variable/noto-serif-hebrew/index.css";
 @import "@fontsource-variable/noto-naskh-arabic/index.css";
+@import "@fontsource/noto-mono/index.css";
 
 body {
   font-family: "Noto Serif Variable", serif;
@@ -56,6 +57,10 @@ body {
 
 :lang(ar) {
   font-family: "Noto Naskh Arabic Variable", "Noto Serif Variable", serif;
+}
+
+.font-monospace {
+  font-family: "Noto Mono", monospace;
 }
 
 @media screen and (prefers-color-scheme: dark) {
