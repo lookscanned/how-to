@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/lookscanned/how-to/compare/v1.2.1...v2.0.0) (2025-12-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* migrate from Vue + Vite to VitePress ([#188](https://github.com/lookscanned/how-to/issues/188))
+
+### Code Refactoring
+
+* migrate from Vue + Vite to VitePress ([#188](https://github.com/lookscanned/how-to/issues/188)) ([e597656](https://github.com/lookscanned/how-to/commit/e59765679df5816f146f5e577d312359ed5a9d03))
+
 ## [1.2.1](https://github.com/lookscanned/how-to/compare/v1.2.0...v1.2.1) (2025-01-06)
 
 
