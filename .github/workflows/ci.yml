@@ -190,7 +190,7 @@ jobs:
     if: github.event_name == 'release'
     environment:
       name: npm
-      url: https://www.npmjs.com/package/@lookscanned/how-to
+      url: ${{ steps.npm-url.outputs.url }}
     permissions:
       contents: read
       id-token: write # Required for OIDC trusted publishing
@@ -222,6 +222,13 @@ jobs:
 
       - name: Publish to npm
         run: pnpm publish --no-git-checks
+
+      - name: Get npm URL
+        id: npm-url
+        run: |
+          VERSION="${{ github.event.release.tag_name }}"
+          VERSION="${VERSION#v}"
+          echo "url=https://www.npmjs.com/package/@lookscanned/how-to/v/${VERSION}" >> $GITHUB_OUTPUT
 
   publish-to-github-packages:
     name: Publish to GitHub Packages
