@@ -7,10 +7,6 @@ settings:
 importers:
 
   .:
-    dependencies:
-      '@fontsource/noto-mono':
-        specifier: ^5.2.5
-        version: 5.2.5
     devDependencies:
       '@commitlint/cli':
         specifier: ^20.2.0
@@ -51,6 +47,9 @@ importers:
       '@fontsource-variable/noto-serif-thai':
         specifier: ^5.2.7
         version: 5.2.7
+      '@fontsource/noto-mono':
+        specifier: ^5.2.5
+        version: 5.2.5
       '@tsconfig/node22':
         specifier: ^22.0.5
         version: 22.0.5
