@@ -27,13 +27,10 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: 22
-          cache: 'pnpm'
+          cache: "pnpm"
 
       - name: Install dependencies
         run: pnpm install
-
-      - name: Install system dependencies
-        run: sudo apt-get update && sudo apt-get install -y exiftool mupdf-tools
 
       - name: ESLint Check
         run: pnpm run lint-check
@@ -49,9 +46,6 @@ jobs:
 
       - name: Build PDFs
         run: pnpm run build:pdfs
-
-      - name: Build Sitemap
-        run: pnpm run build:sitemap
 
       - name: Run build
         run: pnpm run build
@@ -87,7 +81,7 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: 20
-          cache: 'pnpm'
+          cache: "pnpm"
 
       - name: Install dependencies
         run: pnpm install
@@ -131,7 +125,7 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: 20
-          cache: 'pnpm'
+          cache: "pnpm"
 
       - name: Install dependencies
         run: pnpm install
@@ -182,7 +176,7 @@ jobs:
         uses: actions/upload-pages-artifact@v4
         with:
           # Upload entire repository
-          path: 'dist'
+          path: "dist"
 
       - name: Deploy to GitHub Pages
         id: deployment
@@ -199,7 +193,7 @@ jobs:
       url: https://www.npmjs.com/package/@lookscanned/how-to
     permissions:
       contents: read
-      id-token: write  # Required for OIDC trusted publishing
+      id-token: write # Required for OIDC trusted publishing
 
     steps:
       - name: Checkout
@@ -214,8 +208,8 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: 20
-          cache: 'pnpm'
-          registry-url: 'https://registry.npmjs.org'
+          cache: "pnpm"
+          registry-url: "https://registry.npmjs.org"
 
       - name: Install dependencies
         run: pnpm install
@@ -249,7 +243,7 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: 20
-          cache: 'pnpm'
+          cache: "pnpm"
           registry-url: https://npm.pkg.github.com/
 
       - name: Install dependencies

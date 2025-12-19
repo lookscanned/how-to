@@ -4,17 +4,15 @@
   "private": false,
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "run-p type-check \"build-only {@}\" --",
-    "preview": "vite preview",
-    "build-only": "vite build",
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview",
     "type-check": "vue-tsc --build",
     "lint": "eslint . --fix",
     "lint-check": "eslint . --no-fix",
-    "format": "prettier --write src/",
-    "format-check": "prettier --check src/",
-    "build:pdfs": "vite-node scripts/build-pdfs.ts",
-    "build:sitemap": "vite-node scripts/build-sitemap.ts",
+    "format": "prettier --write .",
+    "format-check": "prettier --check .",
+    "build:pdfs": "vite-node scripts/build-pdfs/index.ts",
     "prepare": "husky"
   },
   "publishConfig": {
@@ -43,6 +41,7 @@
   "devDependencies": {
     "@commitlint/cli": "^20.2.0",
     "@commitlint/config-conventional": "^20.2.0",
+    "@commitlint/types": "^20.2.0",
     "@fontsource-variable/noto-naskh-arabic": "^5.2.10",
     "@fontsource-variable/noto-serif": "^5.2.9",
     "@fontsource-variable/noto-serif-devanagari": "^5.2.10",
@@ -55,28 +54,20 @@
     "@fontsource-variable/noto-serif-thai": "^5.2.7",
     "@tsconfig/node22": "^22.0.5",
     "@types/node": "^25.0.3",
-    "@unhead/vue": "^2.0.19",
-    "@vitejs/plugin-vue": "^6.0.3",
     "@vue/eslint-config-prettier": "^10.2.0",
     "@vue/eslint-config-typescript": "^14.6.0",
-    "@vue/tsconfig": "^0.8.1",
-    "@vueuse/core": "^14.1.0",
-    "dompurify": "^3.3.1",
+    "@vue/tsconfig": "0.8.1",
     "eslint": "^9.39.2",
     "eslint-plugin-vue": "^10.6.2",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
-    "marked": "^17.0.1",
-    "npm-run-all2": "^8.0.4",
+    "mupdf": "^1.26.4",
     "prettier": "^3.7.4",
-    "puppeteer": "^24.33.0",
-    "sitemap": "^9.0.0",
+    "puppeteer": "^24.33.1",
     "typescript": "~5.9.3",
-    "vite": "^7.3.0",
     "vite-node": "^5.2.0",
-    "vite-plugin-vue-devtools": "^8.0.5",
-    "vue": "^3.5.25",
-    "vue-router": "^4.6.4",
+    "vitepress": "2.0.0-alpha.15",
+    "vue": "^3.5.26",
     "vue-tsc": "^3.1.8"
   },
   "packageManager": "pnpm@10.26.0+sha512.3b3f6c725ebe712506c0ab1ad4133cf86b1f4b687effce62a9b38b4d72e3954242e643190fc51fa1642949c735f403debd44f5cb0edd657abe63a8b6a7e1e402",
@@ -85,5 +76,8 @@
       "eslint --fix",
       "prettier --write"
     ]
+  },
+  "dependencies": {
+    "@fontsource/noto-mono": "^5.2.5"
   }
 }

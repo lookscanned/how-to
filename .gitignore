@@ -20,6 +20,7 @@ coverage
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
+!.vscode/settings.json
 .idea
 *.suo
 *.ntvs*
@@ -29,5 +30,6 @@ coverage
 
 *.tsbuildinfo
 
-public/pdfs/
-public/sitemap.xml
+docs/public/pdfs/
+
+.vitepress/cache
