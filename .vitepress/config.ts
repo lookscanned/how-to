@@ -47,4 +47,10 @@ export default defineConfig({
     hostname: "https://how-to.lookscanned.io",
     lastmodDateOnly: false,
   },
+
+  transformHtml: (html) => {
+    // Remove empty vp-icons.css link as workaround for VitePress issue #4869
+    // https://github.com/vuejs/vitepress/issues/4869
+    return html.replace(/<link[^>]*href="[^"]*vp-icons\.css"[^>]*>/g, "");
+  },
 });
