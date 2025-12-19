@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.2](https://github.com/lookscanned/how-to/compare/v2.0.1...v2.0.2) (2025-12-19)
+
+
+### Performance Improvements
+
+* move @fontsource/noto-mono to devDependencies ([#197](https://github.com/lookscanned/how-to/issues/197)) ([8bab308](https://github.com/lookscanned/how-to/commit/8bab30826c964e16671a9ed430153606a44b3ae8))
+
 ## [2.0.1](https://github.com/lookscanned/how-to/compare/v2.0.0...v2.0.1) (2025-12-19)
 
 
