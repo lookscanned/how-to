@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.1](https://github.com/lookscanned/how-to/compare/v2.0.0...v2.0.1) (2025-12-19)
+
+
+### Bug Fixes
+
+* **ci:** use lts/* for Node.js version since npm trusted publish needs latest npm ([#192](https://github.com/lookscanned/how-to/issues/192)) ([5c551b1](https://github.com/lookscanned/how-to/commit/5c551b1c4cb984423b13ea92963295cb8c092465))
+
 ## [2.0.0](https://github.com/lookscanned/how-to/compare/v1.2.1...v2.0.0) (2025-12-19)
 
 
