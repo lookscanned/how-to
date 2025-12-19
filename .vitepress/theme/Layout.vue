@@ -57,6 +57,10 @@ const rtlLangs = ["ar", "he"];
   }
 }
 
+.article {
+  font-size: 1.5rem;
+}
+
 .article :deep(a) {
   color: inherit;
   text-decoration: none;
@@ -64,6 +68,18 @@ const rtlLangs = ["ar", "he"];
 
 .article :deep(a):hover {
   text-decoration: underline;
+}
+
+.article :deep(h2) {
+  font-size: 1.17em;
+}
+
+.article :deep(p) {
+  text-align: justify;
+}
+
+.article :deep(h1) {
+  font-size: 1.5em;
 }
 </style>
 
