@@ -40,7 +40,7 @@
   ],
   "devDependencies": {
     "@commitlint/cli": "^20.2.0",
-    "@commitlint/config-conventional": "^20.2.0",
+    "@commitlint/config-conventional": "^20.3.0",
     "@commitlint/types": "^20.2.0",
     "@fontsource-variable/noto-naskh-arabic": "^5.2.10",
     "@fontsource-variable/noto-serif": "^5.2.9",
