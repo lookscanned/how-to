@@ -78,8 +78,8 @@ importers:
         specifier: ^16.2.7
         version: 16.2.7
       mupdf:
-        specifier: ^1.26.4
-        version: 1.26.4
+        specifier: ^1.27.0
+        version: 1.27.0
       prettier:
         specifier: ^3.7.4
         version: 3.7.4
@@ -1628,8 +1628,8 @@ packages:
   muggle-string@0.4.1:
     resolution: {integrity: sha512-VNTrAak/KhO2i8dqqnqnAHOa3cYBwXEZe9h+D5h/1ZqFSTEFHdM65lR7RoIqq3tBBYavsOXV84NoHXZ0AkPyqQ==}
 
-  mupdf@1.26.4:
-    resolution: {integrity: sha512-lv+0KCowetjXu/80h1WKDsELnvHvt7zAE4cs3TC92gwbbJk8AJifMpPLRHMWFovvsWXdFZ6KKCGRds3EzA9TlQ==}
+  mupdf@1.27.0:
+    resolution: {integrity: sha512-vEPUYwZeu5NgiFLz4e20R7Vp2pNY7szirGEvTxHyQQpQs6ab4DeGdonwT6sH1JZG5EhyHSrojZrZn2/0ee6qZQ==}
 
   nano-spawn@2.0.0:
     resolution: {integrity: sha512-tacvGzUY5o2D8CBh2rrwxyNojUsZNU2zjNTzKQrkgGJQTbGAfArVWXSKMBokBeeg6C7OLRGUEyoFlYbfeWQIqw==}
@@ -3669,7 +3669,7 @@ snapshots:
 
   muggle-string@0.4.1: {}
 
-  mupdf@1.26.4: {}
+  mupdf@1.27.0: {}
 
   nano-spawn@2.0.0: {}
 
