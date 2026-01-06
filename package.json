@@ -62,7 +62,7 @@
     "eslint-plugin-vue": "^10.6.2",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
-    "mupdf": "^1.26.4",
+    "mupdf": "^1.27.0",
     "prettier": "^3.7.4",
     "puppeteer": "^24.34.0",
     "typescript": "~5.9.3",
